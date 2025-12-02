@@ -53,16 +53,40 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          priceTextField(),
-          amountTextField(),
-          calculateButton(),
-          showTotalText(),
-          receiveMoneyTextField(),
-          changeCalculateButton(),
-          showChangeText(),
-        ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Text(
+                "Change Calculation",
+                style: TextStyle(
+                    fontFamily: "maa",
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.blue,
+                    backgroundColor: Colors.red),
+              ),
+              Image.asset(
+                "assets/huli.png",
+                height: 240,
+              ),
+              Image.network(
+                'https://s3.ifanr.com/wp-content/uploads/2014/02/3dgifs6.gif',
+                height: 120,
+              ),
+              SizedBox(height: 8),
+              priceTextField(),
+              amountTextField(),
+              calculateButton(),
+              showTotalText(),
+              receiveMoneyTextField(),
+              changeCalculateButton(),
+              showChangeText(),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -169,3 +193,22 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+//  Text(
+//             "change Calcuate",
+//             style: TextStyle(fontFamily: "maa"),
+//           ),
+//           Padding(padding: const EdgeInsets.all(8.0), child: priceTextField()),
+
+// body: Column(
+//               children: [
+//                 Text(
+//                   "change Calcuate",
+//                   style: TextStyle(
+//                       fontFamily: "maa",
+//                       fontSize: 48,
+//                       fontWeight: FontWeight.bold,
+//                       fontStyle: FontStyle.italic,
+//                       color: Colors.deepPurple,
+//                       backgroundColor: Colors.blue),
+//                 ),
