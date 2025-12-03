@@ -193,22 +193,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-//  Text(
-//             "change Calcuate",
-//             style: TextStyle(fontFamily: "maa"),
-//           ),
-//           Padding(padding: const EdgeInsets.all(8.0), child: priceTextField()),
-
-// body: Column(
-//               children: [
-//                 Text(
-//                   "change Calcuate",
-//                   style: TextStyle(
-//                       fontFamily: "maa",
-//                       fontSize: 48,
-//                       fontWeight: FontWeight.bold,
-//                       fontStyle: FontStyle.italic,
-//                       color: Colors.deepPurple,
-//                       backgroundColor: Colors.blue),
-//                 ),
