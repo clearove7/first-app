@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     backgroundColor: Colors.red),
               ),
               Image.asset(
-                "assets/huli.png",
+                "assets/longmao.png",
                 height: 240,
               ),
               Image.network(
