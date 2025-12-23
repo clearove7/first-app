@@ -6,21 +6,32 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Contact')),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'AJ Tui',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              'pattama@email.com',
-              style: TextStyle(fontSize: 20),
-            ),
-          ],
-        ),
+      appBar: AppBar(
+        title: const Text('Contact'),
+      ),
+      body: ListView(
+        children: const [
+          ListTile(
+            leading: Icon(Icons.person),
+            title: Text('AJ Tui'),
+            subtitle: Text('Owner'),
+            trailing: Icon(Icons.arrow_forward_ios),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.email),
+            title: Text('Email'),
+            subtitle: Text('pattama@email.com'),
+            trailing: Icon(Icons.arrow_forward_ios),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.phone),
+            title: Text('Phone'),
+            subtitle: Text('+66 123 456 789'),
+            trailing: Icon(Icons.arrow_forward_ios),
+          ),
+        ],
       ),
     );
   }
