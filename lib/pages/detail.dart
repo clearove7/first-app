@@ -1,7 +1,28 @@
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
-  const DetailPage({super.key});
+class DetailPage extends StatefulWidget {
+  final String v1;
+  final String v2;
+  final String v3;
+  final String v4;
+
+  const DetailPage(this.v1, this.v2, this.v3, this.v4, {super.key});
+
+  @override
+  State<DetailPage> createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
+  late String v1, v2, v3, v4;
+
+  @override
+  void initState() {
+    super.initState();
+    v1 = widget.v1;
+    v2 = widget.v2;
+    v3 = widget.v3;
+    v4 = widget.v4;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -9,40 +30,18 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Detail Page'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
           children: [
-            // ✅ PDF 要求：Different image (from internet)
+            Text(v1),
+            Text(v2),
             Image.network(
-              'https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_640.jpg',
-              width: 220,
+              v3,
+              height: 220,
+              fit: BoxFit.cover,
             ),
-            const SizedBox(height: 20),
-
-            // ✅ Information
-            const Text(
-              'Product Detail',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 10),
-
-            const Text(
-              'This is the detail page',
-              style: TextStyle(fontSize: 18),
-            ),
-            const SizedBox(height: 30),
-
-            // ✅ PDF 要求：Back to previous page
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text('Back'),
-            ),
+            Text(v4),
           ],
         ),
       ),
